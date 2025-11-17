@@ -26,6 +26,9 @@ spec:
           image: pritamworld/hellodocker:latest #Replace with your image <dockerusername>/hellodocker:latest
           ports:
             - containerPort: 80
+          env:
+            - name: NAME
+              value: "Pritesh from minikube"
           readinessProbe:
             httpGet:
               path: /
